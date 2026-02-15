@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<title>Arb Dashboard</title>
+<style>
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#020617;color:#e2e8f0;padding:24px;max-width:980px;margin:auto}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:14px;padding:16px;margin:12px 0}
+.kpi{display:inline-block;margin-right:18px;margin-bottom:8px;color:#cbd5e1}
+a{color:#60a5fa} table{width:100%;border-collapse:collapse} td,th{padding:8px;border-bottom:1px solid #1e293b;text-align:left;font-size:14px}
+.small{color:#94a3b8;font-size:12px}
+</style></head><body>
+<h1>Arbitrage Paper Dashboard (High Volume)</h1>
+<p><a href="dashboard_index.html">← Back</a></p>
+<div class="card">
+  <div class="kpi"><b>Bankroll</b>: €1,000.63</div>
+  <div class="kpi"><b>Total arb sets</b>: 3</div>
+  <div class="kpi"><b>Total matches scanned</b>: 3</div>
+  <div class="kpi"><b>Runs</b>: 1</div>
+  <div class="kpi"><b>Latest edge</b>: 1.697%</div>
+</div>
+<div class="card"><svg width="860" height="220" viewBox="0 0 860 220" role="img" aria-label="chart">
+  <rect x="0" y="0" width="860" height="220" fill="#0b1220" rx="12"/>
+  <polyline points="24.0,196.0 430.0,173.9 836.0,24.0" fill="none" stroke="#22c55e" stroke-width="3"/>
+  <text x="24" y="18" fill="#94a3b8" font-size="12">min €1,000.24 / max €1,000.63</text>
+</svg></div>
+<div class="card"><h3>Arb execution log</h3>
+<table><thead><tr><th>Date</th><th>League</th><th>Match</th><th>Edge %</th><th>H</th><th>D</th><th>A</th><th>Result</th><th>PnL</th><th>Bankroll</th></tr></thead><tbody><tr><td>2019-08-16</td><td>D1</td><td>Bayern Munich vs Hertha</td><td>1.25</td><td>1.25</td><td>8.0</td><td>16.0</td><td>D</td><td>€0.24</td><td>€1,000.24</td></tr><tr><td>2019-08-16</td><td>F2</td><td>Valenciennes vs Rodez</td><td>0.245</td><td>3.25</td><td>3.2</td><td>2.65</td><td>H</td><td>€0.05</td><td>€1,000.29</td></tr><tr><td>2019-08-16</td><td>P1</td><td>Famalicao vs Rio Ave</td><td>1.697</td><td>3.0</td><td>3.58</td><td>2.7</td><td>H</td><td>€0.34</td><td>€1,000.63</td></tr></tbody></table>
+<p class="small">Arbitrage condition: 1/H + 1/D + 1/A &lt; 1 using best available bookmaker odds in historical CSV data.</p>
+</div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {})
+}
+</script>
+</body></html>
