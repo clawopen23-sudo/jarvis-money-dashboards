@@ -8,6 +8,7 @@ const ASSETS = [
   './dashboard_exchange.html',
   './dashboard_arb.html',
   './dashboard_backtests.html',
+  './dashboard_live_ops.html',
   './manifest.webmanifest',
   './icon.svg'
 ];

@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<title>Live Ops</title>
+<style>
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#020617;color:#e2e8f0;padding:24px;max-width:980px;margin:auto}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:14px;padding:16px;margin:12px 0}
+.kpi{display:inline-block;margin-right:18px;margin-bottom:8px;color:#cbd5e1}
+a{color:#60a5fa} table{width:100%;border-collapse:collapse} td,th{padding:8px;border-bottom:1px solid #1e293b;text-align:left;font-size:14px}
+.small{color:#94a3b8;font-size:12px}
+</style></head><body>
+<h1>Live Ops & Risk Policy</h1>
+<p><a href="dashboard_index.html">← Back</a></p>
+<div class="card">
+  <h3>Current risk limits (live policy)</h3>
+  <ul>
+    <li>Max daily drawdown: <b>3%</b></li>
+    <li>Max weekly drawdown: <b>6%</b></li>
+    <li>Max monthly drawdown: <b>10%</b></li>
+    <li>Max risk per trade: <b>0.5%</b></li>
+    <li>Min cash buffer: <b>30%</b></li>
+    <li>Kill-switch: automatic on hard-limit breach</li>
+  </ul>
+</div>
+<div class="card">
+  <h3>Data freshness</h3>
+  <table><thead><tr><th>Source</th><th>Last update</th></tr></thead><tbody><tr><td>Backtest report</td><td>2026-02-15T00:10:53</td></tr><tr><td>Monthly validation</td><td>2026-02-15T00:12:14</td></tr><tr><td>Crypto log</td><td>2026-02-14T22:39:05</td></tr><tr><td>Football fixed log</td><td>2026-02-14T17:01:00</td></tr><tr><td>Football exchange log</td><td>2026-02-14T17:35:00</td></tr><tr><td>Arbitrage log</td><td>2026-02-15T00:49:14</td></tr></tbody></table>
+</div>
+<div class="card">
+  <h3>Operations docs</h3>
+  <ul>
+    <li><code>ARCHITECTURE.md</code></li>
+    <li><code>RISK_POLICY.md</code></li>
+    <li><code>RUNBOOK.md</code></li>
+  </ul>
+</div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {})
+}
+</script>
+</body></html>
