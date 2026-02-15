@@ -1,5 +1,10 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
 <title>Multi-Asset Dashboard</title>
 <style>
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#020617;color:#e2e8f0;padding:24px;max-width:980px;margin:auto}
@@ -37,4 +42,10 @@ a{color:#60a5fa} table{width:100%;border-collapse:collapse} td,th{padding:8px;bo
 <table><thead><tr><th>Timestamp</th><th>Side</th><th>Asset</th><th>Class</th><th>Price</th><th>EUR</th><th>Qty</th><th>Fee</th></tr></thead><tbody><tr><td>2026-02-15T01:25:34.072126+00:00</td><td>BUY</td><td>AAPL.US</td><td>stock</td><td>255.78</td><td>€166.67</td><td>0.6509500351864884</td><td>€0.17</td></tr><tr><td>2026-02-15T01:25:34.072126+00:00</td><td>BUY</td><td>MSFT.US</td><td>stock</td><td>401.32</td><td>€166.67</td><td>0.41488089305292536</td><td>€0.17</td></tr><tr><td>2026-02-15T01:25:34.072126+00:00</td><td>BUY</td><td>SPY.US</td><td>etf</td><td>681.75</td><td>€166.67</td><td>0.24422442244224424</td><td>€0.17</td></tr><tr><td>2026-02-15T01:25:34.072126+00:00</td><td>BUY</td><td>QQQ.US</td><td>etf</td><td>601.92</td><td>€166.67</td><td>0.2766148325358852</td><td>€0.17</td></tr><tr><td>2026-02-15T01:25:34.072126+00:00</td><td>BUY</td><td>EURUSD</td><td>forex</td><td>1.18744</td><td>€166.67</td><td>140.21761099508186</td><td>€0.17</td></tr><tr><td>2026-02-15T01:25:34.072126+00:00</td><td>BUY</td><td>GBPUSD</td><td>forex</td><td>1.36564</td><td>€166.67</td><td>121.92085761987055</td><td>€0.17</td></tr><tr><td>2026-02-15T01:36:56.657146+00:00</td><td>FX_SELL</td><td>EURUSD</td><td>forex</td><td>1.18744</td><td>€166.50</td><td>140.21761099508186</td><td>€0.17</td></tr><tr><td>2026-02-15T01:36:56.657146+00:00</td><td>FX_SELL</td><td>GBPUSD</td><td>forex</td><td>1.36564</td><td>€166.50</td><td>121.92085761987055</td><td>€0.17</td></tr><tr><td>2026-02-15T01:40:04.940964+00:00</td><td>EQ_SELL</td><td>AAPL.US</td><td>stock</td><td>255.78</td><td>€116.57</td><td>0.45573011963406046</td><td>€0.12</td></tr><tr><td>2026-02-15T01:40:04.940964+00:00</td><td>EQ_SELL</td><td>MSFT.US</td><td>stock</td><td>401.32</td><td>€116.57</td><td>0.290458113226353</td><td>€0.12</td></tr><tr><td>2026-02-15T01:40:04.940964+00:00</td><td>EQ_SELL</td><td>SPY.US</td><td>etf</td><td>681.75</td><td>€116.57</td><td>0.17098151815181514</td><td>€0.12</td></tr><tr><td>2026-02-15T01:40:04.940964+00:00</td><td>EQ_SELL</td><td>QQQ.US</td><td>etf</td><td>601.92</td><td>€116.57</td><td>0.19365804425837319</td><td>€0.12</td></tr></tbody></table>
 <p class="small">Source prices: stooq.com CSV feed. Paper simulation only.</p>
 </div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {})
+}
+</script>
 </body></html>

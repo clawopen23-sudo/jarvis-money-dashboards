@@ -1,5 +1,10 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
 <title>Backtests</title>
 <style>
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#020617;color:#e2e8f0;padding:24px;max-width:980px;margin:auto}
@@ -11,6 +16,12 @@ a{color:#60a5fa} table{width:100%;border-collapse:collapse} td,th{padding:8px;bo
 <h1>Backtest Results (Past ~6 Months)</h1>
 <p><a href="dashboard_index.html">← Back</a></p>
 <div class="card"><b>Period:</b> 2025-08-18 → 2026-02-14</div>
-<div class="card"><table><thead><tr><th>Strategy</th><th>Start</th><th>End</th><th>PnL</th><th>Bets/Days</th><th>Win Rate</th></tr></thead><tbody><tr><td>crypto_paper</td><td>€1,000.00</td><td>€756.09</td><td>€-243.91</td><td>181</td><td>—</td></tr><tr><td>football_fixed_paper</td><td>€1,000.00</td><td>€1,023.56</td><td>€23.56</td><td>376</td><td>53.99</td></tr><tr><td>football_exchange_paper</td><td>€1,000.00</td><td>€1,050.26</td><td>€50.26</td><td>374</td><td>47.86</td></tr><tr><td>multiasset_paper</td><td>€1,000.00</td><td>€992.47</td><td>€-7.53</td><td>125</td><td>—</td></tr></tbody></table></div>
-<p class="small">Generated: 2026-02-15T02:04:23.119826+00:00</p>
+<div class="card"><table><thead><tr><th>Strategy</th><th>Start</th><th>End</th><th>PnL</th><th>Bets/Days</th><th>Win Rate</th></tr></thead><tbody><tr><td>crypto_paper</td><td>€1,000.00</td><td>€1,000.00</td><td>€0.00</td><td>0</td><td>—</td></tr><tr><td>football_fixed_paper</td><td>€1,000.00</td><td>€1,002.30</td><td>€2.30</td><td>244</td><td>55.33</td></tr><tr><td>football_exchange_paper</td><td>€1,000.00</td><td>€996.04</td><td>€-3.96</td><td>301</td><td>47.18</td></tr><tr><td>multiasset_paper</td><td>€1,000.00</td><td>€998.08</td><td>€-1.92</td><td>125</td><td>—</td></tr></tbody></table></div>
+<p class="small">Generated: 2026-02-15T02:15:36.228650+00:00</p>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {})
+}
+</script>
 </body></html>

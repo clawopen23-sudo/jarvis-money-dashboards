@@ -1,5 +1,10 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
 <title>Football Dashboard</title>
 <style>
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#020617;color:#e2e8f0;padding:24px;max-width:980px;margin:auto}
@@ -28,4 +33,10 @@ a{color:#60a5fa} table{width:100%;border-collapse:collapse} td,th{padding:8px;bo
 <table><thead><tr><th>Date</th><th>League</th><th>Match</th><th>Pick</th><th>Coeff.</th><th>Final</th><th>Stake</th><th>PnL</th></tr></thead><tbody><tr style="background:#3f1d1d"><td>2023-08-11</td><td>SP1</td><td>Sevilla vs Valencia</td><td>H</td><td>1.91</td><td>A</td><td>€10.00</td><td>€-10.00</td></tr></tbody></table>
 <p class="small">Source: football-data.co.uk historical match/odds CSV (B365 columns). This is paper simulation, not live execution.</p>
 </div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {})
+}
+</script>
 </body></html>

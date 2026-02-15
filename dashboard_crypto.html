@@ -1,5 +1,10 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#020617" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
 <title>Crypto Dashboard</title>
 <style>
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#020617;color:#e2e8f0;padding:24px;max-width:980px;margin:auto}
@@ -26,4 +31,10 @@ a{color:#60a5fa} table{width:100%;border-collapse:collapse} td,th{padding:8px;bo
   "ETH": 0.09037166728493418,
   "SOL": 5.390530149736949
 }</pre></div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {})
+}
+</script>
 </body></html>
